@@ -510,6 +510,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4635653807046359016, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: m_Name
+      value: Cubinox
+      objectReference: {fileID: 0}
     - target: {fileID: 4635653807046359015, guid: af6e6f61f9df4aa458809799c93d2460,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,15 +570,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4635653807046359016, guid: af6e6f61f9df4aa458809799c93d2460,
-        type: 3}
-      propertyPath: m_Name
-      value: Cubinox
-      objectReference: {fileID: 0}
     - target: {fileID: 4635653807046359017, guid: af6e6f61f9df4aa458809799c93d2460,
         type: 3}
       propertyPath: m_Simulated
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635653807046359017, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635653807046359012, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: jumpForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635653807046359012, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: howHigh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635653807046359012, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: fallForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635653807046359012, guid: af6e6f61f9df4aa458809799c93d2460,
+        type: 3}
+      propertyPath: fwdForce
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6e6f61f9df4aa458809799c93d2460, type: 3}
@@ -661,7 +686,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 729524725}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d595314a74541ac48bd562e35462c970, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

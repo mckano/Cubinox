@@ -5,23 +5,15 @@ using UnityEngine;
 public class Hold_Player : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        Player_Motor pm = collision.gameObject.GetComponent<Player_Motor>();
+        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-        if(pm != null)
+        if(rb != null)
         {
-            pm.transform.parent = transform;
+            rb.bodyType = RigidbodyType2D.Static;
+            rb.transform.parent = transform;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Player_Motor pm = collision.gameObject.GetComponent<Player_Motor>();
-
-        if (pm != null)
-        {
-            pm.transform.parent = null;
-        }
-    }
 }

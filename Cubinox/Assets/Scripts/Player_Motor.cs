@@ -14,6 +14,7 @@ public class Player_Motor : MonoBehaviour
 
     public float fallForce;
     public float howHigh;
+    public float fwdForce;
     public float jumpForce;
     public float speed;
     public Sprite[] sprites;
@@ -62,11 +63,19 @@ public class Player_Motor : MonoBehaviour
 
     void Jump()
     {
+        RaycastHit2D hit;
+
         if (Input.GetButtonDown("Jump"))
         {
             if (Physics2D.Raycast(transform.position, Vector2.down, 0.6f, colorLayer))
             {
                 rb.AddForce(new Vector2(0, jumpForce));
+            }
+            
+            if(Physics2D.Raycast(transform.position, Vector2.left, 0.6f, colorLayer))
+            {
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                rb.AddForce(new Vector2(fwdForce, jumpForce));
             }
         }
     }
