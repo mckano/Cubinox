@@ -9,6 +9,7 @@ public class Player_Motor : MonoBehaviour
     public States currentColor;
 
     int colorLayer;
+    int jumpLayer;
     Rigidbody2D rb;
     SpriteRenderer sr;
 
@@ -50,11 +51,13 @@ public class Player_Motor : MonoBehaviour
         {
             case States.blackey:
                 colorLayer = LayerMask.GetMask("Black_Tile");
+                jumpLayer = LayerMask.GetMask("Black_Wall");
                 sr.sprite = sprites[0];
                 gameObject.layer = 8;
                 break;
             case States.whitey:
                 colorLayer = LayerMask.GetMask("White_Tile");
+                jumpLayer = LayerMask.GetMask("White_Wall");
                 sr.sprite = sprites[1];
                 gameObject.layer = 9;
                 break;
@@ -63,19 +66,12 @@ public class Player_Motor : MonoBehaviour
 
     void Jump()
     {
-        RaycastHit2D hit;
 
         if (Input.GetButtonDown("Jump"))
         {
             if (Physics2D.Raycast(transform.position, Vector2.down, 0.6f, colorLayer))
             {
                 rb.AddForce(new Vector2(0, jumpForce));
-            }
-            
-            if(Physics2D.Raycast(transform.position, Vector2.left, 0.6f, colorLayer))
-            {
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                rb.AddForce(new Vector2(fwdForce, jumpForce));
             }
         }
     }
