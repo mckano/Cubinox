@@ -7415,5 +7415,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1107795881}
+    - target: {fileID: 8480934112221016187, guid: e8675b8ad23da4643a324a50b5626d04,
+        type: 3}
+      propertyPath: offset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8675b8ad23da4643a324a50b5626d04, type: 3}
