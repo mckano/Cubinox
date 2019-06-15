@@ -7350,11 +7350,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8480934112221016185, guid: e8675b8ad23da4643a324a50b5626d04,
-        type: 3}
-      propertyPath: m_Name
-      value: Pixel_Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 8480934112221016197, guid: e8675b8ad23da4643a324a50b5626d04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7410,6 +7405,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8480934112221016185, guid: e8675b8ad23da4643a324a50b5626d04,
+        type: 3}
+      propertyPath: m_Name
+      value: Pixel_Camera
+      objectReference: {fileID: 0}
     - target: {fileID: 8480934112221016187, guid: e8675b8ad23da4643a324a50b5626d04,
         type: 3}
       propertyPath: target
@@ -7419,6 +7419,16 @@ PrefabInstance:
         type: 3}
       propertyPath: offset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480934112221016187, guid: e8675b8ad23da4643a324a50b5626d04,
+        type: 3}
+      propertyPath: minY
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480934112221016187, guid: e8675b8ad23da4643a324a50b5626d04,
+        type: 3}
+      propertyPath: maxY
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8675b8ad23da4643a324a50b5626d04, type: 3}
